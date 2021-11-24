@@ -1,0 +1,45 @@
+[{
+  "_id": {
+    "$oid": "619d84808321ce3c1926d4ec"
+  },
+  "isbn": "",
+  "book_title": "",
+  "book_author": {
+    "author_last_name": "",
+    "author_first_name": ""
+  },
+  "book_genre": ""
+},{
+  "_id": {
+    "$oid": "619d85398321ce3c1926d4ef"
+  },
+  "isbn": 9780141439518,
+  "book_title": "Pride & Prejudice",
+  "book_author": {
+    "author_last_name": "Austen",
+    "author_first_name": "Jane"
+  },
+  "book_genre": "Classic Literature"
+},{
+  "_id": {
+    "$oid": "619d86318321ce3c1926d4f1"
+  },
+  "isbn": 9781505297409,
+  "book_title": "Treasure Island",
+  "book_author": {
+    "author_last_name": "Stevenson",
+    "author_first_name": "Robert Louise"
+  },
+  "book_genre": "Classic Literature"
+},{
+  "_id": {
+    "$oid": "619d8b408321ce3c1926d4f2"
+  },
+  "isbn": "978-0451524935",
+  "book_title": "1984",
+  "book_author": {
+    "author_last_name": "Orwell",
+    "author_first_name": "George"
+  },
+  "book_genre": "dystopia\", \"classic literature"
+}]

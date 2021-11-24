@@ -1,0 +1,5 @@
+_id,book_author.author_first_name,book_author.author_last_name,book_genre,book_title,isbn
+619d84808321ce3c1926d4ec,,,,,
+619d85398321ce3c1926d4ef,Jane,Austen,Classic Literature,Pride & Prejudice,9780141439518
+619d86318321ce3c1926d4f1,Robert Louise,Stevenson,Classic Literature,Treasure Island,9781505297409
+619d8b408321ce3c1926d4f2,George,Orwell,"dystopia"", ""classic literature",1984,978-0451524935

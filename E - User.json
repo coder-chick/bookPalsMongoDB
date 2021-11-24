@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "619d7cfc787ad9281d4df7f3"
+  },
+  "user_name": "",
+  "email": "",
+  "city": "",
+  "state": "",
+  "geographical_region": {
+    "\"region_name": "",
+    "\"region_pickup_location": ""
+  },
+  "owner": true,
+  "borrower": true,
+  "borrowed_book_id": "",
+  "owned_book_id": ""
+},{
+  "_id": {
+    "$oid": "619d8d3e4600d0ca53733c81"
+  },
+  "user_name": "rachel_green",
+  "email": "rachel@ralphlauren.com",
+  "city": "New York",
+  "state": "NY",
+  "geographical_region": {
+    "\"region_name": "Central Park",
+    "\"region_pickup_location": "Central Perk"
+  },
+  "owner": true,
+  "borrower": false,
+  "borrowed_book_id": "",
+  "owned_book_id": {
+    "$oid": "619d85398321ce3c1926d4ef"
+  }
+},{
+  "_id": {
+    "$oid": "619d8da24600d0ca53733c82"
+  },
+  "user_name": "howYouDoin",
+  "email": "joey_tribianni@daysofourlives.com",
+  "city": "Brooklyn",
+  "state": "NY",
+  "geographical_region": {
+    "\"region_name": "Brooklyn",
+    "\"region_pickup_location": "Luigi's Pizzaria"
+  },
+  "owner": false,
+  "borrower": true,
+  "borrowed_book_id": {
+    "$oid": "619d86318321ce3c1926d4f1"
+  },
+  "owned_book_id": ""
+},{
+  "_id": {
+    "$oid": "619d8e554600d0ca53733c83"
+  },
+  "user_name": "dr_ross_geller",
+  "email": "iloverachelgreen@gmail.com",
+  "city": "Manhattan",
+  "state": "NY",
+  "geographical_region": {
+    "\"region_name": "Manhattan",
+    "\"region_pickup_location": "Central Perk"
+  },
+  "owner": true,
+  "borrower": false,
+  "borrowed_book_id": "",
+  "owned_book_id": {
+    "$oid": "619d86318321ce3c1926d4f1"
+  }
+},{
+  "_id": {
+    "$oid": "619d8ed64600d0ca53733c84"
+  },
+  "user_name": "monica_bing",
+  "email": "monica@chef.com",
+  "city": "Westchester",
+  "state": "NY",
+  "geographical_region": {
+    "\"region_name": "Westchester",
+    "\"region_pickup_location": "Central Perk"
+  },
+  "owner": false,
+  "borrower": true,
+  "borrowed_book_id": {
+    "$oid": "619d85398321ce3c1926d4ef"
+  },
+  "owned_book_id": ""
+},{
+  "_id": {
+    "$oid": "619d905bad1064deda220d51"
+  },
+  "user_name": "phoebebuffay",
+  "email": "smellycat@centralperk.com",
+  "city": "New York",
+  "state": "NY",
+  "geographical_region": {
+    "\"region_name": "Central Park",
+    "\"region_pickup_location": "Central Perk"
+  },
+  "owner": true,
+  "borrower": false,
+  "borrowed_book_id": "619d86318321ce3c1926d4f1",
+  "owned_book_id": ""
+},{
+  "_id": {
+    "$oid": "619d90b8ad1064deda220d52"
+  },
+  "user_name": "chandlermuriel",
+  "email": "baddabing@bing.com",
+  "city": "Westchester",
+  "state": "NY",
+  "geographical_region": {
+    "\"region_name": "Westchester",
+    "\"region_pickup_location": "Central Perk"
+  },
+  "owner": false,
+  "borrower": true,
+  "borrowed_book_id": "",
+  "owned_book_id": "619d8b408321ce3c1926d4f2"
+}]
