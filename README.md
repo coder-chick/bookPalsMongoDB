@@ -1,7 +1,7 @@
 # bookPalsMongoDB
 A simple demo application on how to combine node + express + mongoDB + EJS
 
-## What is the project
+## Descripton of project
 
 BookPals is a book swapping management system that allows book owners loan their favorite books to borrowers residing in the same geographical region.
 
@@ -10,13 +10,15 @@ BookPals is a book swapping management system that allows book owners loan their
 
 Book owners can add the books they wish to share with others. Book borrowers can select books to borrow within their region. Users can also rate the books.
 
+
 ## How was the work distributed
 
 Semaa and Yvette worked on every part of the assignment separately and then met to compare our work and select the most optimal solutions.
 
+## Project contents:
 
 
-## Detailed explanation of how can the project be executed
+## Detailed explanation of how the project can be executed
 
 ## Installation
 
