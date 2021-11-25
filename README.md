@@ -43,9 +43,6 @@ Semaa and Yvette worked on every part of the assignment separately and then met 
 * We had learned from our previous lesson and adjusted our isbn values to be int64 values rather than have them have dashes in between. Also, the ISBNs are no longer the primary keys as MongoDB provides each book and User with a unique primary key, which makes the overall application more accurate. 
 
 
-## Screenshot of Application
-https://github.com/coder-chick/BookPalsNodeExpressSQLiteEJS/blob/main/ScreenShotOfApplication.png
-
 ## Authors
 * Yvette Green
 * Semaa Amin
