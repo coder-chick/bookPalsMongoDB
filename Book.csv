@@ -1,0 +1,7 @@
+_id,book_author.author_alive,book_author.author_first_name,book_author.author_last_name,book_genre,book_length,book_title,isbn
+619d85398321ce3c1926d4ef,false,Jane,Austen,Classic Literature,122,Pride & Prejudice,9780141439518
+619d86318321ce3c1926d4f1,false,Robert Louise,Stevenson,Classic Literature,180,Treasure Island,9781505297409
+619d8b408321ce3c1926d4f2,false,George,Orwell,"Dystopia"", ""Classic Literature",200,1984,9780451524935
+619ee3e3b8c9716be5e36bc8,false,George,Orwell,Dystopia,112,Animal Farm,9780141036137
+619ee47bb8c9716be5e36bc9,false,Jane,Austen,Classic Literature,100,Sense & Sensibility,9780141439662
+619f2e65cdc65c60d0ef5987,true,Gayle,Laakmann McDowell,Technology,700,Cracking the Coding Interview,0984782869

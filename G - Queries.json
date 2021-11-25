@@ -1,0 +1,24 @@
+//Query 1 - Comparison Connector
+db.Book.find({"book_length": {"$lte": 150}, "book_author.author_last_name":{"$eq":"Orwell"}})
+
+
+//Query 2 - Complex Search Criterion - 2 logical connectors
+db.Book.find({"$expr":{"$and": [{"$gt": ["$book_length", 150]},
+{"$eq": ["$book_author.author_last_name","Orwell" ]}]}}).pretty()db.User.updateOne({"user_name":"rachel_green"}, {"$set":{"active":false}})
+
+//Query 3 - counting
+db.User.find({"city":"New York"}).count()
+
+//Query 4 - flipping on off boolean
+db.User.updateOne({"user_name":"rachel_green"}, {"$set":{"active":false}})
+
+//Query 5 - aggregation
+db.Book.aggregate([
+	{"$match":{"book_genre":"Classic Literature"}},
+	{"$project":{"book_title":1,
+							"book_author.author_last_name":1,
+							"book_genre":1,
+							"_id": 0}}
+
+
+]).pretty()

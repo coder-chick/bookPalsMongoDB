@@ -1,25 +1,16 @@
 [{
   "_id": {
-    "$oid": "619d84808321ce3c1926d4ec"
-  },
-  "isbn": "",
-  "book_title": "",
-  "book_author": {
-    "author_last_name": "",
-    "author_first_name": ""
-  },
-  "book_genre": ""
-},{
-  "_id": {
     "$oid": "619d85398321ce3c1926d4ef"
   },
   "isbn": 9780141439518,
   "book_title": "Pride & Prejudice",
   "book_author": {
     "author_last_name": "Austen",
-    "author_first_name": "Jane"
+    "author_first_name": "Jane",
+    "author_alive": false
   },
-  "book_genre": "Classic Literature"
+  "book_genre": "Classic Literature",
+  "book_length": 122
 },{
   "_id": {
     "$oid": "619d86318321ce3c1926d4f1"
@@ -28,18 +19,61 @@
   "book_title": "Treasure Island",
   "book_author": {
     "author_last_name": "Stevenson",
-    "author_first_name": "Robert Louise"
+    "author_first_name": "Robert Louise",
+    "author_alive": false
   },
-  "book_genre": "Classic Literature"
+  "book_genre": "Classic Literature",
+  "book_length": 180
 },{
   "_id": {
     "$oid": "619d8b408321ce3c1926d4f2"
   },
-  "isbn": "978-0451524935",
+  "isbn": 9780451524935,
   "book_title": "1984",
   "book_author": {
     "author_last_name": "Orwell",
-    "author_first_name": "George"
+    "author_first_name": "George",
+    "author_alive": false
   },
-  "book_genre": "dystopia\", \"classic literature"
+  "book_genre": "Dystopia\", \"Classic Literature",
+  "book_length": 200
+},{
+  "_id": {
+    "$oid": "619ee3e3b8c9716be5e36bc8"
+  },
+  "isbn": 9780141036137,
+  "book_title": "Animal Farm",
+  "book_author": {
+    "author_last_name": "Orwell",
+    "author_first_name": "George",
+    "author_alive": false
+  },
+  "book_genre": "Dystopia",
+  "book_length": 112
+},{
+  "_id": {
+    "$oid": "619ee47bb8c9716be5e36bc9"
+  },
+  "isbn": 9780141439662,
+  "book_title": "Sense & Sensibility",
+  "book_author": {
+    "author_last_name": "Austen",
+    "author_first_name": "Jane",
+    "author_alive": false
+  },
+  "book_genre": "Classic Literature",
+  "book_length": 100
+},{
+  "_id": {
+    "$oid": "619f2e65cdc65c60d0ef5987"
+  },
+  "isbn": "0984782869",
+  "book_title": "Cracking the Coding Interview",
+  "book_genre": "Technology",
+  "book_author": {
+    "author_first_name": "Gayle",
+    "author_last_name": "Laakmann McDowell",
+    "author_alive": true
+  },
+  "book_length": 700
 }]

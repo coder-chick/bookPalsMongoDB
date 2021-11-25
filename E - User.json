@@ -1,21 +1,5 @@
 [{
   "_id": {
-    "$oid": "619d7cfc787ad9281d4df7f3"
-  },
-  "user_name": "",
-  "email": "",
-  "city": "",
-  "state": "",
-  "geographical_region": {
-    "\"region_name": "",
-    "\"region_pickup_location": ""
-  },
-  "owner": true,
-  "borrower": true,
-  "borrowed_book_id": "",
-  "owned_book_id": ""
-},{
-  "_id": {
     "$oid": "619d8d3e4600d0ca53733c81"
   },
   "user_name": "rachel_green",
@@ -27,11 +11,14 @@
     "\"region_pickup_location": "Central Perk"
   },
   "owner": true,
-  "borrower": false,
-  "borrowed_book_id": "",
+  "borrower": true,
+  "borrowed_book_id": {
+    "$oid": "619ee47bb8c9716be5e36bc9"
+  },
   "owned_book_id": {
     "$oid": "619d85398321ce3c1926d4ef"
-  }
+  },
+  "active": false
 },{
   "_id": {
     "$oid": "619d8da24600d0ca53733c82"
@@ -49,7 +36,8 @@
   "borrowed_book_id": {
     "$oid": "619d86318321ce3c1926d4f1"
   },
-  "owned_book_id": ""
+  "owned_book_id": "",
+  "active": true
 },{
   "_id": {
     "$oid": "619d8e554600d0ca53733c83"
@@ -63,11 +51,14 @@
     "\"region_pickup_location": "Central Perk"
   },
   "owner": true,
-  "borrower": false,
-  "borrowed_book_id": "",
+  "borrower": true,
+  "borrowed_book_id": {
+    "$oid": "619ee3e3b8c9716be5e36bc8"
+  },
   "owned_book_id": {
     "$oid": "619d86318321ce3c1926d4f1"
-  }
+  },
+  "active": true
 },{
   "_id": {
     "$oid": "619d8ed64600d0ca53733c84"
@@ -85,7 +76,8 @@
   "borrowed_book_id": {
     "$oid": "619d85398321ce3c1926d4ef"
   },
-  "owned_book_id": ""
+  "owned_book_id": "",
+  "active": true
 },{
   "_id": {
     "$oid": "619d905bad1064deda220d51"
@@ -100,8 +92,9 @@
   },
   "owner": true,
   "borrower": false,
-  "borrowed_book_id": "619d86318321ce3c1926d4f1",
-  "owned_book_id": ""
+  "borrowed_book_id": {},
+  "owned_book_id": "",
+  "active": true
 },{
   "_id": {
     "$oid": "619d90b8ad1064deda220d52"
@@ -117,5 +110,46 @@
   "owner": false,
   "borrower": true,
   "borrowed_book_id": "",
-  "owned_book_id": "619d8b408321ce3c1926d4f2"
+  "owned_book_id": {
+    "$oid": "619d8b408321ce3c1926d4f2"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "619efd28e68edcd732519d7a"
+  },
+  "user_name": "mike_hannigan",
+  "email": "idontage@antman.com",
+  "city": "New York",
+  "state": "NY",
+  "geographical_region": {
+    "\"region_name": "Westchester",
+    "\"region_pickup_location": "Central Perk"
+  },
+  "owner": true,
+  "borrower": false,
+  "borrowed_book_id": "",
+  "owned_book_id": {
+    "$oid": "619ee3e3b8c9716be5e36bc8"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "619efd95e68edcd732519d7c"
+  },
+  "user_name": "gus_loves_rachel",
+  "email": "gus@centralperk.com",
+  "city": "New York",
+  "state": "NY",
+  "geographical_region": {
+    "\"region_name": "Central Park",
+    "\"region_pickup_location": "Central Perk"
+  },
+  "owner": true,
+  "borrower": false,
+  "borrowed_book_id": "",
+  "owned_book_id": {
+    "$oid": "619ee47bb8c9716be5e36bc9"
+  },
+  "active": true
 }]

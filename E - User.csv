@@ -1,8 +1,9 @@
-_id,borrowed_book_id,borrower,city,email,"geographical_region.""region_name","geographical_region.""region_pickup_location",owned_book_id,owner,state,user_name
-619d7cfc787ad9281d4df7f3,,true,,,,,,true,,
-619d8d3e4600d0ca53733c81,,false,New York,rachel@ralphlauren.com,Central Park,Central Perk,619d85398321ce3c1926d4ef,true,NY,rachel_green
-619d8da24600d0ca53733c82,619d86318321ce3c1926d4f1,true,Brooklyn,joey_tribianni@daysofourlives.com,Brooklyn,"Luigi's Pizzaria",,false,NY,howYouDoin
-619d8e554600d0ca53733c83,,false,Manhattan,iloverachelgreen@gmail.com,Manhattan,Central Perk,619d86318321ce3c1926d4f1,true,NY,dr_ross_geller
-619d8ed64600d0ca53733c84,619d85398321ce3c1926d4ef,true,Westchester,monica@chef.com,Westchester,Central Perk,,false,NY,monica_bing
-619d905bad1064deda220d51,619d86318321ce3c1926d4f1,false,New York,smellycat@centralperk.com,Central Park,Central Perk,,true,NY,phoebebuffay
-619d90b8ad1064deda220d52,,true,Westchester,baddabing@bing.com,Westchester,Central Perk,619d8b408321ce3c1926d4f2,false,NY,chandlermuriel
+_id,active,borrowed_book_id,borrower,city,email,"geographical_region.""region_name","geographical_region.""region_pickup_location",owned_book_id,owner,state,user_name
+619d8d3e4600d0ca53733c81,false,619ee47bb8c9716be5e36bc9,true,New York,rachel@ralphlauren.com,Central Park,Central Perk,619d85398321ce3c1926d4ef,true,NY,rachel_green
+619d8da24600d0ca53733c82,true,619d86318321ce3c1926d4f1,true,Brooklyn,joey_tribianni@daysofourlives.com,Brooklyn,"Luigi's Pizzaria",,false,NY,howYouDoin
+619d8e554600d0ca53733c83,true,619ee3e3b8c9716be5e36bc8,true,Manhattan,iloverachelgreen@gmail.com,Manhattan,Central Perk,619d86318321ce3c1926d4f1,true,NY,dr_ross_geller
+619d8ed64600d0ca53733c84,true,619d85398321ce3c1926d4ef,true,Westchester,monica@chef.com,Westchester,Central Perk,,false,NY,monica_bing
+619d905bad1064deda220d51,true,[object Object],false,New York,smellycat@centralperk.com,Central Park,Central Perk,,true,NY,phoebebuffay
+619d90b8ad1064deda220d52,true,,true,Westchester,baddabing@bing.com,Westchester,Central Perk,619d8b408321ce3c1926d4f2,false,NY,chandlermuriel
+619efd28e68edcd732519d7a,true,,false,New York,idontage@antman.com,Westchester,Central Perk,619ee3e3b8c9716be5e36bc8,true,NY,mike_hannigan
+619efd95e68edcd732519d7c,true,,false,New York,gus@centralperk.com,Central Park,Central Perk,619ee47bb8c9716be5e36bc9,true,NY,gus_loves_rachel
