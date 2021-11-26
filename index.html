@@ -3,30 +3,286 @@
 <body>
     <h1>Hello Mongo</h1>
     <div>
-        <input type="text" name="user" value="Laurence">
+        Add new User
+        <input type="text" name="user_name" placeholder="Your Name">
         <button class="btn1">Add User</button>
     </div>
+
+    <div>
+        Find in Database Filter
+        <input type="text" name="finder" value="rachel_green">
+        <button class="btn3">Find Match</button>
+    </div>
+
+    <!-- <div>
+        <input type="text" name="book_title" value="A Tale of Two Cities">
+        <button class="btnBook1">Add Book</button>
+    </div> -->
+    <button class="btn2">List Data</button>
+    <div class="output">
+
+    </div>
+
+
+    <div>
+        Add new Book
+        <input type="text" name="book_title" placeholder="book_title">
+        <button class="btnA">Add User</button>
+    </div>
+
+    <div>
+        Find in Database Filter
+        <input type="text" name="finder" value="1984">
+        <button class="btnC">Find Match</button>
+    </div>
+
+
+    <button class="btnB">List Data</button>
+    <div class="output">
+
+    </div>
+
     <script>
-        const input1 =
-        document.querySelector('input[name="user"]');
+        const input1 = document.querySelector('input[name="user_name"]');
+        const input2 = document.querySelector('input[name="finder"]');
         const btn1 = document.querySelector('.btn1');
+        const btn2 = document.querySelector('.btn2');
+        const btn3 = document.querySelector('.btn3');
+        const output = document.querySelector('.output');
         const endPoint = '/users';
-    btn1.addEventListener('click', () => {
-        const data = {
-            name: input1.value
-        };
-        fetch(endPoint, {
-            method: 'post',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-Type': 'application/json'
+
+        function createOutput(data){
+            output.innerHTML = '<div>Users</div>';
+            data.forEach(element => {
+                console.log(element);
+                const main = document.createElement('div');
+
+                const myInput = document.createElement('input');
+                myInput.setAttribute('type','text');
+                myInput.value = element.user_name;
+                main.append(myInput);
+
+                const emailInput = document.createElement('input');
+                emailInput.setAttribute('type','text');
+                emailInput.value = element.email;
+                main.append(emailInput);
+
+                const cityInput = document.createElement('input');
+                cityInput.setAttribute('type','text');
+                cityInput.value = element.city;
+                main.append(cityInput);
+
+                const stateInput = document.createElement('input');
+                stateInput.setAttribute('type','text');
+                stateInput.value = element.state;
+                main.append(stateInput);
+
+                // const pickupInput = document.createElement('input');
+                // pickupInput.setAttribute('type','text');
+                // pickupInput.value = element.geographical_region.region_pickup_location;
+                // main.append(pickupInput);
+
+
+                const span1 = document.createElement('span');
+                span1.textContent = element._id;
+                main.append(span1);
+
+                const button1 = document.createElement('button');
+                button1.textContent = 'Delete';
+                button1.style.color = 'red';
+                button1.addEventListener('click',()=>{
+                    console.log('DELETE');
+                    console.log('DELETE');
+                    fetch(endPoint, {
+                        method: 'delete',
+                        body: JSON.stringify(element),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    }).then(res => res.json()).then(data => {
+                        if (data.status) {
+                            main.remove();
+                        }
+                    })
+                })
+                main.append(button1);
+
+                const button2 = document.createElement('button');
+                button2.textContent = 'Update';
+                button2.style.color = 'green';
+                button2.addEventListener('click',()=>{
+                    element.user_name = myInput.value;
+                    element.email = emailInput.value;
+                    element.city = cityInput.value;
+                    element.state = stateInput.value;
+                    console.log(element);
+                    fetch(endPoint,{
+                    method:'put',
+                        body:JSON.stringify(element),
+                        headers: {
+                        'Content-Type': 'application/json'
+                        }
+                    }).then(res => res.json()).then(data => {
+                    console.log(data);
+                    })
+                })
+                main.append(button2);
+
+                output.append(main);
+                });
             }
-        }).then(res => res.json()).then(data => {
-        console.log(data);
-        })
-    })
+
+            btn3.addEventListener('click',()=>{
+                fetch('/user/'+input2.value).then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    createOutput(data);
+                })
+            })
+            btn2.addEventListener('click',()=>{
+                fetch(endPoint).then(res => res.json())
+                .then(data => {
+                createOutput(data);
+                })
+            })
+
+    
+            btn1.addEventListener('click', () => {
+                const data = {
+                    user_name: input1.value
+                };
+                fetch(endPoint, {
+                    method: 'post',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(res => res.json()).then(data => {
+                console.log(data);
+                })
+            })
+
+        const inputA = document.querySelector('input[name="book_title"]');
+        const inputB = document.querySelector('input[name="finder"]');
+        const btnA = document.querySelector('.btnA');
+        const btnB = document.querySelector('.btnB');
+        const btnC = document.querySelector('.btnC');
+        const output2 = document.querySelector('.output2');
+        const endPoint2 = '/books';
+
+        function createOutputBook(data){
+            output2.innerHTML = '<div>Books</div>';
+            data.forEach(element => {
+                console.log(element);
+                const main = document.createElement('div');
+
+                const titleInput = document.createElement('input');
+                titleInput.setAttribute('type','text');
+                titleInput.value = element.book_title;
+                main.append(titleInput);
+
+                const isbnInput = document.createElement('input');
+                isbnInput.setAttribute('type','text');
+                isbnInput.value = element.isbn;
+                main.append(isbnInput);
+
+                const genreInput = document.createElement('input');
+                genreInput.setAttribute('type','text');
+                genreInput.value = element.book_genre;
+                main.append(genreInput);
+
+                const lengthInput = document.createElement('input');
+                lengthInput.setAttribute('type','text');
+                lengthInput.value = element.book_length;
+                main.append(lengthInput);
+
+                // const pickupInput = document.createElement('input');
+                // pickupInput.setAttribute('type','text');
+                // pickupInput.value = element.geographical_region.region_pickup_location;
+                // main.append(pickupInput);
+
+
+                const spanA = document.createElement('span');
+                spanA.textContent = element._id;
+                main.append(spanA);
+
+                const buttonA = document.createElement('button');
+                buttonA.textContent = 'Delete';
+                buttonA.style.color = 'red';
+                buttonA.addEventListener('click',()=>{
+                    console.log('DELETE');
+                    console.log('DELETE');
+                    fetch(endPoint2, {
+                        method: 'delete',
+                        body: JSON.stringify(element),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    }).then(res => res.json()).then(data => {
+                        if (data.status) {
+                            main.remove();
+                        }
+                    })
+                })
+                main.append(buttonA);
+
+                const buttonB = document.createElement('button');
+                buttonB.textContent = 'Update';
+                buttonB.style.color = 'green';
+                buttonB.addEventListener('click',()=>{
+                    element.book_title = titleInput.value;
+                    element.isbn = isbnInput.value;
+                    element.book_genre = genreInput.value;
+                    element.book_length = lengthInput.value;
+                    console.log(element);
+                    fetch(endPoint2,{
+                    method:'put',
+                        body:JSON.stringify(element),
+                        headers: {
+                        'Content-Type': 'application/json'
+                        }
+                    }).then(res => res.json()).then(data => {
+                    console.log(data);
+                    })
+                })
+                main.append(buttonB);
+
+                output2.append(main);
+                });
+            }   
+
+            btnC.addEventListener('click',()=>{
+                fetch('/book/'+inputB.value).then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    createOutputBook(data);
+                })
+            })
+            btnB.addEventListener('click',()=>{
+                fetch(endPoint2).then(res => res.json())
+                .then(data => {
+                    createOutputBook(data);
+                })
+            })
+
+    
+            btnA.addEventListener('click', () => {
+                const data = {
+                    book_title: inputA.value
+                };
+                fetch(endPoint2, {
+                    method: 'post',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }).then(res => res.json()).then(data => {
+                console.log(data);
+                })
+            })
+
+        
     </script>
-</body>
-</html>   
+
 </body>
 </html>
